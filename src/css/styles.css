@@ -1,12 +1,80 @@
-html {
-    font-size: 16px;
-}
+/*
+Blau: #1F4E8C
+Dumkelgrau: #3D3F45
+Hellgrau: #e5e5e5
+Rot: #a6221
+*/
 
-body {
-    margin: 0;
-    font-family: "Raleway", "Lato", "Helvetica Neue", "Arial", sans-serif;
+:root {
+  --blue: #1f4e8c;
+  --dark-grey: #3d3f45;
+  --light-grey: #e5e5e5;
+  --red: #a62c21;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: "Raleway", "Lato", "Helvetica Neue", "Arial", sans-serif;
+}
+
+/* Navigationsleiste */
+.header-nav {
+  width: 100%;
+  height: 50px;
+  background-color: var(--dark-grey);
+  font-weight: bold;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.header-nav > a > img {
+  height: 30px;
+  width: auto;
+  /* Elternelement braucht position: relative*/
+  position: absolute;
+  left: 2rem;
+  top: 0.55rem;
+}
+
+.header-nav > ul {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 2rem;
+  height: 100%;
+}
+
+.header-nav > ul > li {
+  display: inline-block;
+  height: 100%;
+  padding: 0 .2rem;
+}
+
+.header-nav > ul > li > a {
+  display: inline-block;
+  margin-top: 0.8rem;
+}
+
+.header-nav > ul > li > a:link,
+.header-nav > ul > li > a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-nav > ul > li > a:hover,
+.header-nav > ul > li > a:active {
+  color: var(--light-grey);
+  text-decoration: none;
+}
+
+.active {
+  background-color: var(--red);
 }
