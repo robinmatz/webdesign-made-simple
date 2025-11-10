@@ -94,16 +94,23 @@ body {
 }
 
 .active {
-  background-color: var(--red);
+  background-color: var(--red) !important;
 }
 
 /*Mobile Navigationsleiste */
 
 .mobile-nav-dropdown {
+  display: inline-block;
   position: relative;
+  float: right;
+}
+
+.mobile-nav-dropdown:hover .mobile-nav-content {
+  display: block;
 }
 
 .mobile-nav-content {
+  display: none;
   position: absolute;
   top: 50px;
   right: 0;
@@ -119,6 +126,7 @@ body {
   height: 37px;
   position: relative;
   margin-top: .2rem;
+  margin-bottom: 10px;
 }
 
 .mobile-nav-button > span {
@@ -133,6 +141,20 @@ body {
   height: 50px;
   padding: 0 1.2rem;
   text-align: center;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media(max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
 }
 
 /*Header-Banner*/
