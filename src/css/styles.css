@@ -12,6 +12,8 @@ Rot: #a6221
   --red: #a62c21;
 }
 
+/* Global */
+
 * {
   box-sizing: border-box;
 }
@@ -23,6 +25,14 @@ html {
 body {
   margin: 0;
   font-family: "Raleway", "Lato", "Helvetica Neue", "Arial", sans-serif;
+}
+
+/* Generelles */
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
 }
 
 /* Navigationsleiste */
@@ -89,6 +99,16 @@ body {
 
 /*Mobile Navigationsleiste */
 
+.mobile-nav-dropdown {
+  position: relative;
+}
+
+.mobile-nav-content {
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+
 .mobile-nav-button {
   float: right;
   color: var(--light-grey);
@@ -106,6 +126,15 @@ body {
   left: 7px;
   bottom: 2px;
 }
+
+.mobile-nav-content > ul > li {
+  display: block;
+  background-color: var(--dark-grey);
+  height: 50px;
+  padding: 0 1.2rem;
+  text-align: center;
+}
+
 /*Header-Banner*/
 .header-banner {
   background: url("../img/hintergrund.jpg") no-repeat;
