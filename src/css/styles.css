@@ -27,6 +27,39 @@ body {
   font-family: "Raleway", "Lato", "Helvetica Neue", "Arial", sans-serif;
 }
 
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (max-width: 1366px) {
+  section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+:focus {
+  outline: none;
+  box-shadow:
+    0 0 5px 2px var(--light-grey),
+    0 0 5px var(--light-grey);
+}
+
 /* Generelles */
 
 .clearfix::after {
@@ -47,7 +80,38 @@ body {
   background-color: var(--red);
   border: 2px solid var(--red);
   color: #ffffff;
-  padding: 0.6rem;
+  padding: 0.4rem 0.6rem;
+}
+
+.btn-type-1:hover {
+  border: 2px solid #ffffff;
+}
+
+.btn-type-2 {
+  border: 2px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  padding: 0.4rem 0.6rem;
+}
+
+.btn-type-2:hover {
+  border: 2px solid var(--red);
+  color: var(--red);
+}
+
+.intro-container {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto 2.5rem auto;
+}
+
+.intro-container > h1 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.intro-container > p {
+  font-size: 1.2rem;
 }
 
 /* Navigationsleiste */
@@ -110,6 +174,10 @@ body {
 
 .active {
   background-color: var(--red) !important;
+}
+
+.logo-link {
+  display: inline-block;
 }
 
 /*Mobile Navigationsleiste */
@@ -195,6 +263,8 @@ body {
 #newsletter-bereich {
   width: 100%;
   background-color: var(--dark-grey);
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 #nb-werbetext {
@@ -208,7 +278,7 @@ body {
   text-align: right;
 }
 
-.nb-email-input {
+#nb-email-input {
   width: 78%;
   height: 40px;
   border: solid 2px #ffffff;
@@ -259,9 +329,77 @@ body {
     height: 25px;
     padding: 0;
   }
-
 }
 
+/*Leistungen Bereich*/
+
+.leistung-box {
+  background-color: var(--dark-grey);
+  text-align: center;
+  color: #fff;
+  padding: 1rem 3rem 2.5rem;
+  width: 60%;
+  margin-bottom: 1.6rem;
+}
+
+#leistungen-bereich .row > .col-3:nth-of-type(even) > .leistung-box {
+  margin-right: auto;
+  margin-left: 1rem;
+}
+#leistungen-bereich .row > .col-3:nth-of-type(odd) > .leistung-box {
+  margin-right: 1rem;
+  margin-left: auto;
+}
+
+.leistung-box > h2 {
+  font-size: 1.4rem;
+}
+
+.leistung-ansehen-btn {
+  display: inline-block;
+  height: 40px;
+  padding-top: 0.5rem;
+  width: 60%;
+  text-decoration: none;
+  margin-top: 1rem;
+  min-width: 100px;
+}
+
+@media (max-width: 1366px) {
+  .leistung-box {
+    width: 80%;
+  }
+
+  .intro-container {
+    width: 90%;
+  }
+
+  .intro-container > p {
+    margin-bottom: .5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .intro-container {
+    width: 100%;
+  }
+
+  .intro-container > p {
+    margin-bottom: 0;
+  }
+
+  .leistung-box {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #leistungen-bereich .row > .col-3:nth-of-type(even) > .leistung-box,
+  #leistungen-bereich .row > .col-3:nth-of-type(odd) > .leistung-box {
+    margin: 0;
+  }
+}
 /*Grid System Sichtbarkeit*/
 /*.border,*/
 /*.border * {*/
