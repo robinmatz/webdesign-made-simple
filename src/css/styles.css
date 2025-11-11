@@ -35,8 +35,23 @@ body {
   display: block;
 }
 
+.wichtiger-text {
+  font-weight: bold;
+}
+
+.screenreader {
+  display: none;
+}
+
+.btn-type-1 {
+  background-color: var(--red);
+  border: 2px solid var(--red);
+  color: #ffffff;
+  padding: 0.6rem;
+}
+
 /* Navigationsleiste */
-.header-nav {
+#header-nav {
   width: 100%;
   height: 50px;
   background-color: var(--dark-grey);
@@ -45,7 +60,7 @@ body {
   position: relative;
 }
 
-.header-nav a > img {
+#header-nav a > img {
   height: 30px;
   width: auto;
   float: left;
@@ -53,43 +68,43 @@ body {
   margin: 0.55rem;
 }
 
-.header-nav ul {
+#header-nav ul {
   margin: 0;
   padding: 0;
   float: right;
   height: 100%;
 }
 
-.header-nav ul > li {
+#header-nav ul > li {
   display: inline-block;
   height: 100%;
   padding: 0 0.2rem;
 }
 
-.header-nav ul > li > a {
+#header-nav ul > li > a {
   display: inline-block;
   margin-top: 0.8rem;
 }
 
-.header-nav ul > li > a:link,
-.header-nav ul > li > a:visited {
+#header-nav ul > li > a:link,
+#header-nav ul > li > a:visited {
   color: #fff;
   text-decoration: none;
 }
 
-.header-nav ul > li > a:hover,
-.header-nav ul > li > a:active {
+#header-nav ul > li > a:hover,
+#header-nav ul > li > a:active {
   color: var(--light-grey);
   text-decoration: none;
 }
 
-.header-nav .col-6 {
+#header-nav .col-6 {
   padding: 0;
 }
 
-.header-nav .container,
-.header-nav .row,
-.header-nav .col-6 {
+#header-nav .container,
+#header-nav .row,
+#header-nav .col-6 {
   height: 100%;
 }
 
@@ -99,43 +114,43 @@ body {
 
 /*Mobile Navigationsleiste */
 
-.mobile-nav-dropdown {
+#mobile-nav-dropdown {
   display: inline-block;
   position: relative;
   float: right;
 }
 
-.mobile-nav-dropdown:hover .mobile-nav-content {
+#mobile-nav-dropdown:hover #mobile-nav-content {
   display: block;
 }
 
-.mobile-nav-content {
+#mobile-nav-content {
   display: none;
   position: absolute;
   top: 50px;
   right: 0;
 }
 
-.mobile-nav-button {
+#mobile-nav-button {
   float: right;
   color: var(--light-grey);
   font-size: 2rem;
   border: 2px solid var(--light-grey);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   width: 37px;
   height: 37px;
   position: relative;
-  margin-top: .2rem;
+  margin-top: 0.2rem;
   margin-bottom: 10px;
 }
 
-.mobile-nav-button > span {
+#mobile-nav-button > span {
   position: relative;
   left: 7px;
   bottom: 2px;
 }
 
-.mobile-nav-content > ul > li {
+#mobile-nav-content > ul > li {
   display: block;
   background-color: var(--dark-grey);
   height: 50px;
@@ -143,22 +158,22 @@ body {
   text-align: center;
 }
 
-.mobile-nav {
+#mobile-nav {
   display: none;
 }
 
-@media(max-width: 768px) {
-  .desktop-nav {
+@media (max-width: 768px) {
+  #desktop-nav {
     display: none;
   }
 
-  .mobile-nav {
+  #mobile-nav {
     display: block;
   }
 }
 
 /*Header-Banner*/
-.header-banner {
+#header-banner {
   background: url("../img/hintergrund.jpg") no-repeat;
   width: 100%;
   height: 0;
@@ -167,13 +182,84 @@ body {
   background-size: contain;
 }
 
-.header-banner-klein {
+#header-banner-klein {
   background: url("../img/hintergrund-klein.jpg") no-repeat;
   width: 100%;
   height: 0;
   /* 400px / 1920 px * 100*/
   padding-top: 15.625%;
   background-size: contain;
+}
+
+/* Header Banner */
+#newsletter-bereich {
+  width: 100%;
+  background-color: var(--dark-grey);
+}
+
+#nb-werbetext {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+#nb-form {
+  margin-top: 0.8rem;
+  width: 100%;
+  text-align: right;
+}
+
+.nb-email-input {
+  width: 78%;
+  height: 40px;
+  border: solid 2px #ffffff;
+  padding: 0.4rem;
+}
+
+#nb-btn {
+  height: 40px;
+}
+
+@media (max-width: 1822px) {
+  #nb-email-input {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1358px) {
+  #nb-email-input {
+    width: 100%;
+  }
+
+  #nb-btn {
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #nb-werbetext {
+    display: none;
+  }
+
+  #nb-form {
+    margin-top: 0;
+  }
+
+  #newsletter-bereich .col-4 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  #nb-email-input {
+    height: 25px;
+  }
+
+  #nb-btn {
+    height: 25px;
+    padding: 0;
+  }
+
 }
 
 /*Grid System Sichtbarkeit*/
@@ -225,6 +311,10 @@ body {
   width: 50%;
 }
 
+.col-4 {
+  width: 66.666%;
+}
+
 .col-6 {
   width: 100%;
 }
@@ -241,7 +331,8 @@ body {
   }
 
   .col-2,
-  .col-3 {
+  .col-3,
+  .col-4 {
     width: 100%;
   }
 }
