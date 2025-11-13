@@ -551,6 +551,37 @@ section {
   }
 }
 
+/* Footer */
+#footer {
+  background-color: var(--dark-grey);
+  color: var(--white);
+  height: 2.8rem;
+}
+
+#footer-nav {
+  display: inline-block;
+  float: right;
+}
+
+#footer-nav > a {
+  text-decoration: none;
+}
+
+#footer-nav > a:link,
+#footer-nav > a:visited,
+#footer-nav > a:active {
+  color: var(--white);
+}
+
+#footer-nav > a:hover {
+  color: var(--light-grey);
+}
+
+@media (max-width: 565px) {
+  #footer span {
+    display: none;
+  }
+}
 /*Grid System Sichtbarkeit*/
 /*.border,*/
 /*.border * {*/
