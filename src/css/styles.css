@@ -10,6 +10,7 @@ Rot: #a6221
   --dark-grey: #3d3f45;
   --light-grey: #f0f0f0;
   --red: #a62c21;
+  --white: #ffffff;
 }
 
 /* Global */
@@ -79,18 +80,18 @@ section {
 .btn-type-1 {
   background-color: var(--red);
   border: 2px solid var(--red);
-  color: #ffffff;
+  color: var(--white);
   padding: 0.4rem 0.6rem;
 }
 
 .btn-type-1:hover {
-  border: 2px solid #ffffff;
+  border: 2px solid var(--white);
 }
 
 .btn-type-2 {
-  border: 2px solid #ffffff;
+  border: 2px solid var(--white);
   background-color: transparent;
-  color: #ffffff;
+  color: var(--white);
   padding: 0.4rem 0.6rem;
 }
 
@@ -152,7 +153,7 @@ section {
 
 #header-nav ul > li > a:link,
 #header-nav ul > li > a:visited {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
 }
 
@@ -268,7 +269,7 @@ section {
 }
 
 #nb-werbetext {
-  color: #ffffff;
+  color: var(--white);
   font-size: 1.2rem;
 }
 
@@ -281,7 +282,7 @@ section {
 #nb-email-input {
   width: 78%;
   height: 40px;
-  border: solid 2px #ffffff;
+  border: solid 2px var(--white);
   padding: 0.4rem;
 }
 
@@ -336,7 +337,7 @@ section {
 .leistung-box {
   background-color: var(--dark-grey);
   text-align: center;
-  color: #fff;
+  color: var(--white);
   padding: 1rem 3rem 2.5rem;
   width: 60%;
   margin-bottom: 1.6rem;
@@ -404,7 +405,7 @@ section {
 /* Video Bereich */
 #video-bereich {
   background-color: var(--dark-grey);
-  color: #ffffff;
+  color: var(--white);
 }
 
 #video-bereich video {
@@ -493,6 +494,59 @@ section {
 
 @media (max-width: 480px) {
   .service-box {
+    width: 100%;
+  }
+}
+
+/* Über uns Bereich */
+
+#ueber-uns-bereich {
+  background-color: var(--white);
+}
+
+#ueber-uns-container {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+#ueber-uns-container > p {
+  width: 75%;
+  font-size: 1.2rem;
+}
+
+#ueber-uns-container > img {
+  position: absolute;
+  top: 0;
+  right: 100px;
+  height: 100%;
+}
+
+@media (max-width: 1440px) {
+  #ueber-uns-container > img {
+    right: 50px;
+  }
+}
+
+@media (max-width: 1280px) {
+  #ueber-uns-container > img {
+    right: 0;
+  }
+}
+
+@media (max-width: 1140px) {
+  #ueber-uns-container > p {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1024px) {
+  #ueber-uns-container > img {
+    display: none;
+  }
+
+  #ueber-uns-container > p {
     width: 100%;
   }
 }
