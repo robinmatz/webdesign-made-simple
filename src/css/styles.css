@@ -8,7 +8,7 @@ Rot: #a6221
 :root {
   --blue: #1f4e8c;
   --dark-grey: #3d3f45;
-  --light-grey: #e5e5e5;
+  --light-grey: #f0f0f0;
   --red: #a62c21;
 }
 
@@ -435,6 +435,64 @@ section {
 
 @media (max-width: 480px) {
   #video-bereich video {
+    width: 100%;
+  }
+}
+
+/* Service Bereich */
+
+#service-bereich {
+  background-color: var(--light-grey);
+}
+
+.service-box {
+  text-align: center;
+  width: 80%;
+}
+
+.service-box > h1 {
+  font-size: 1.4rem;
+}
+
+#service-bereich .row:nth-of-type(2) > .col-2:first-of-type > .service-box {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+#service-bereich .row:nth-of-type(2) > .col-2:nth-of-type(2) > .service-box {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#guenstig-icon {
+  background: url("../img/services-sprite.png") 0 0 var(--dark-grey);
+}
+
+#schnell-icon {
+  background: url("../img/services-sprite.png") 240px 0 var(--dark-grey);
+}
+
+#modern-icon {
+  background: url("../img/services-sprite.png") 120px 0 var(--dark-grey);
+}
+
+@media (max-width: 768px) {
+  #service-bereich .row:nth-of-type(2) > .col-2:nth-of-type(n) > .service-box {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-box {
     width: 100%;
   }
 }
