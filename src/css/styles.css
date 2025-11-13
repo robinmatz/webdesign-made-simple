@@ -582,6 +582,14 @@ section {
     display: none;
   }
 }
+
+/* Impressum */
+#impressum a {
+  color: var(--dark-grey);
+  font-weight: bold;
+  text-decoration: none;
+}
+
 /*Grid System Sichtbarkeit*/
 /*.border,*/
 /*.border * {*/
