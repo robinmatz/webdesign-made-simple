@@ -67,6 +67,75 @@
     <!-- Header Banner-->
     <header id="header-banner-klein"></header>
 
+    <!-- Kontakt -->
+    <section id="kontakt-bereich">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <header class="intro-container">
+              <h1>Kontakt</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Architecto commodi eius error fugit nisi officiis ratione? At
+                doloremque enim perspiciatis quas quidem quod repellendus, sequi
+                soluta tempore. Aliquam, aut sequi.
+              </p>
+            </header>
+          </div>
+        </div>
+
+        <form id="kontakt-formular" action="./kontakt.html" method="post">
+          <div class="row">
+            <div class="col-3">
+              <label class="screenreader" for="vorname">Vorname:</label>
+              <input
+                type="text"
+                name="vorname"
+                id="vorname"
+                placeholder="Vorname"
+              />
+            </div>
+            <div class="col-3">
+              <label class="screenreader" for="nachname">Nachname:</label>
+              <input
+                type="text"
+                name="nachname"
+                id="nachname"
+                placeholder="Nachname"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <label class="screenreader" for="email">E-Mail:</label>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="E-Mail"
+                pattern="(?:[a-z0-9!#$%&'*+=?^_`\{\|\}~\-]+(?:\.[a-z0-9!#$%&'*+=?^_`\{\|\}~\-]+)*|\u0022(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*\u0022)@(?:(?:[a-z0-9](?:[a-z0-9\-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9\-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9\-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <label class="screenreader" for="nachricht">Nachricht:</label>
+              <textarea
+                name="nachricht"
+                id="nachricht"
+                placeholder="Nachricht"
+              ></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <button class="btn-type-3" type="submit" name="absendenButton">Senden</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer id="footer">
       <div class="container">

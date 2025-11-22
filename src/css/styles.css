@@ -100,6 +100,15 @@ section {
   color: var(--red);
 }
 
+.btn-type-3 {
+  border: 2px solid var(--dark-grey);
+  background-color: transparent;
+  font-size: 1rem;
+  color: var(--dark-grey);
+  width: 150px;
+  height: 39px;
+}
+
 .intro-container {
   text-align: center;
   width: 80%;
@@ -580,6 +589,58 @@ section {
 @media (max-width: 565px) {
   #footer span {
     display: none;
+  }
+}
+
+/* Kontakt */
+#kontakt-formular input,
+#kontakt-formular textarea {
+  width: 100%;
+  border: 2px solid var(--dark-grey);
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-family: "Raleway", "Lato", "Helvetica Neue", "Arial", sans-serif;
+  color: var(--dark-grey);
+}
+
+#kontakt-formular input:hover,
+#kontakt-formular input:hover,
+#kontakt-formular textarea:hover,
+#kontakt-formular textarea:focus,
+#kontakt-formular button:hover {
+  border: 2px solid var(--red);
+}
+
+#kontakt-formular textarea {
+  height: 100px;
+}
+
+#kontakt-formular {
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#kontakt-formular button {
+  float: left;
+}
+
+@media (max-width: 1366px) {
+  #kontakt-formular {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1024px) {
+  #kontakt-formular {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #kontakt-formular button {
+    width: 100%;
   }
 }
 
