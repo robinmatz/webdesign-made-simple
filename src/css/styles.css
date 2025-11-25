@@ -77,6 +77,48 @@ section {
   display: none;
 }
 
+.intro-container {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto 2rem auto;
+}
+
+.intro-container > h1 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.intro-container > p {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 1366px) {
+  .intro-container {
+    width: 90%;
+  }
+
+  .intro-container > p {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .intro-container {
+    width: 100%;
+  }
+
+  .intro-container > p {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-container {
+    margin-bottom: 1rem;
+  }
+}
+/* Buttons */
+
 .btn-type-1 {
   background-color: var(--red);
   border: 2px solid var(--red);
@@ -87,46 +129,36 @@ section {
 
 .btn-type-1:hover {
   border: 2px solid var(--white);
+  font-weight: normal;
 }
 
 .btn-type-2 {
-  border: 2px solid var(--white);
   background-color: transparent;
+  border: 2px solid var(--white);
   color: var(--white);
   padding: 0.4rem 0.6rem;
-  transition: color 0.5s ease-in-out, border 0.5s ease-in-out;
+  transition:
+    color 0.5s ease-in-out,
+    border 0.5s ease-in-out;
 }
 
 .btn-type-2:hover {
   border: 2px solid var(--red);
   color: var(--red);
+  font-weight: normal;
 }
 
 .btn-type-3 {
-  border: 2px solid var(--dark-grey);
   background-color: transparent;
-  font-size: 1rem;
+  border: 2px solid var(--dark-grey);
   color: var(--dark-grey);
+  font-size: 1rem;
   transition: border 0.5s ease-in-out;
 }
 
 .btn-type-3:hover {
   border: 2px solid var(--red);
-}
-
-.intro-container {
-  text-align: center;
-  width: 80%;
-  margin: 0 auto 2.5rem auto;
-}
-
-.intro-container > h1 {
-  font-size: 1.6rem;
-  text-transform: uppercase;
-}
-
-.intro-container > p {
-  font-size: 1.2rem;
+  font-weight: normal;
 }
 
 /* Navigationsleiste */
@@ -171,8 +203,8 @@ section {
   text-decoration: none;
 }
 
-#header-nav ul > li > a:hover,
-#header-nav ul > li > a:active {
+#header-nav ul > li > a:active,
+#header-nav ul > li > a:hover {
   color: var(--light-grey);
   text-decoration: none;
 }
@@ -400,6 +432,12 @@ section {
   animation: logo-spin 5s infinite;
 }
 
+@media (max-width: 768px) {
+  #animiertes-logo {
+    display: none;
+  }
+}
+
 /*Leistungen Bereich*/
 
 .leistungs-teaser-box {
@@ -411,10 +449,17 @@ section {
   margin-bottom: 1.6rem;
 }
 
+@media (max-width: 480px) {
+  .leistungs-teaser-box {
+    padding: 1.5rem;
+  }
+}
+
 #leistungen-bereich .row > .col-3:nth-of-type(even) > .leistungs-teaser-box {
   margin-right: auto;
   margin-left: 1rem;
 }
+
 #leistungen-bereich .row > .col-3:nth-of-type(odd) > .leistungs-teaser-box {
   margin-right: 1rem;
   margin-left: auto;
@@ -438,25 +483,9 @@ section {
   .leistungs-teaser-box {
     width: 80%;
   }
-
-  .intro-container {
-    width: 90%;
-  }
-
-  .intro-container > p {
-    margin-bottom: 0.5rem;
-  }
 }
 
 @media (max-width: 1024px) {
-  .intro-container {
-    width: 100%;
-  }
-
-  .intro-container > p {
-    margin-bottom: 0;
-  }
-
   .leistungs-teaser-box {
     width: 100%;
     margin-bottom: 1rem;
@@ -586,6 +615,7 @@ section {
 #ueber-uns-container > p {
   width: 75%;
   font-size: 1.2rem;
+  margin-top: 0;
 }
 
 #ueber-uns-container > img {
@@ -723,10 +753,6 @@ section {
   min-width: 170px;
 }
 
-.leistung-auswählen-btn:hover {
-  font-weight: normal;
-}
-
 .flex-container > .intro-container {
   width: 100%;
 }
@@ -818,7 +844,12 @@ section {
     padding: 0.5rem 1rem 2rem 1rem;
   }
 }
+
 /* Kontakt-Seite */
+#kontakt-bereich {
+  padding-top: 1rem;
+}
+
 #kontakt-formular input,
 #kontakt-formular textarea {
   width: 100%;
@@ -872,29 +903,15 @@ section {
 }
 
 /* Impressum */
+#impressum {
+  padding-top: 1rem;
+}
+
 #impressum a {
   color: var(--dark-grey);
   font-weight: bold;
   text-decoration: none;
 }
-
-/*Grid System Sichtbarkeit*/
-/*.border,*/
-/*.border * {*/
-/*  border: 1px solid var(--light-grey);*/
-/*}*/
-
-/*[class*="col-"] {*/
-/*  background-color: lightblue;*/
-/*}*/
-
-/*p {*/
-/*  background-color: lightblue;*/
-/*  padding: 0;*/
-/*  margin: 0;*/
-/*  color: #000;*/
-/*  text-align: center;*/
-/*}*/
 
 /*Grid System*/
 .container {
