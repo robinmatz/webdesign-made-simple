@@ -82,6 +82,7 @@ section {
   border: 2px solid var(--red);
   color: var(--white);
   padding: 0.4rem 0.6rem;
+  transition: border 0.5s ease-in-out;
 }
 
 .btn-type-1:hover {
@@ -93,6 +94,7 @@ section {
   background-color: transparent;
   color: var(--white);
   padding: 0.4rem 0.6rem;
+  transition: color 0.5s ease-in-out, border 0.5s ease-in-out;
 }
 
 .btn-type-2:hover {
@@ -105,8 +107,11 @@ section {
   background-color: transparent;
   font-size: 1rem;
   color: var(--dark-grey);
-  width: 150px;
-  height: 39px;
+  transition: border 0.5s ease-in-out;
+}
+
+.btn-type-3:hover {
+  border: 2px solid var(--red);
 }
 
 .intro-container {
@@ -341,6 +346,60 @@ section {
   }
 }
 
+/* Animiertes Logo */
+@keyframes logo-spin {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  11.111% {
+    transform: rotateZ(0deg);
+  }
+  22.222% {
+    transform: rotateZ(90deg);
+  }
+  33.333% {
+    transform: rotateZ(90deg);
+  }
+  44.444% {
+    transform: rotateZ(180deg);
+  }
+  55.555% {
+    transform: rotateZ(180deg);
+  }
+  66.666% {
+    transform: rotateZ(270deg);
+  }
+  77.777% {
+    transform: rotateZ(270deg);
+  }
+  88.888% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(3600deg);
+  }
+}
+
+#animiertes-logo {
+  height: 150px;
+  width: 150px;
+  background-color: var(--dark-grey);
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  padding: 25px;
+}
+
+#animiertes-logo > img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: logo-spin 5s infinite;
+}
+
 /*Leistungen Bereich*/
 
 .leistungs-teaser-box {
@@ -480,8 +539,12 @@ section {
   border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
+  transition: transform 1s;
 }
 
+.service-icon:hover {
+  transform: rotateZ(360deg);
+}
 #guenstig-icon {
   background: url("../img/services-sprite.png") 0 0 var(--dark-grey);
 }
@@ -603,7 +666,6 @@ section {
 }
 
 .leistung:nth-of-type(odd) {
-
 }
 
 .flex-container {
@@ -765,13 +827,12 @@ section {
   font-size: 1rem;
   font-family: "Raleway", "Lato", "Helvetica Neue", "Arial", sans-serif;
   color: var(--dark-grey);
+  transition: border 0.5s ease-in-out;
 }
 
 #kontakt-formular input:hover,
 #kontakt-formular input:hover,
-#kontakt-formular textarea:hover,
-#kontakt-formular textarea:focus,
-#kontakt-formular button:hover {
+#kontakt-formular textarea:hover {
   border: 2px solid var(--red);
 }
 
@@ -786,8 +847,10 @@ section {
   margin-right: auto;
 }
 
-#kontakt-formular button {
+#absendenButton {
   float: left;
+  width: 150px;
+  height: 39px;
 }
 
 @media (max-width: 1366px) {
